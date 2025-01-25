@@ -1,5 +1,7 @@
 'use client'
 import { AddItems } from "@/components/addItems";
+import { AppbarReveal } from "@/components/appbarReveal";
+import CardReveal from "@/components/cardReveal";
 import { DeleteItems } from "@/components/deleteItems";
 import { DisplayItems } from "@/components/displayItems";
 import { UpdateItems } from "@/components/updateItems";
@@ -15,22 +17,30 @@ export default function Home(){
 
   return (
     <div className="font-sans text-white">
-      <div>
-        <h1 className="flex justify-center pt-4 font-bold text-3xl">
-          Inventory Management
-        </h1>
-        <div className="flex justify-center my-2">
-          <a href='#Section1' className="mr-4 hover:cursor-pointer hover:text-gray-300">Operations</a>
-          <a href="#Section2" className="hover:cursor-pointer pr-4 hover:text-gray-300">Display Area</a>
+      <AppbarReveal>
+        <div>
+          <h1 className="flex justify-center pt-4 font-bold text-3xl">
+            Inventory Management
+          </h1>
+          <div className="flex justify-center my-2">
+            <a href='#Section1' className="mr-4 hover:cursor-pointer hover:text-gray-300">Operations</a>
+            <a href="#Section2" className="hover:cursor-pointer pr-4 hover:text-gray-300">Display Area</a>
+          </div>
         </div>
-      </div>
+      </AppbarReveal>
       <section id='Section1' className="grid grid-cols-3 pt-2 h-screen">
-        <AddItems items={items} setItems={setItems}></AddItems>
-        <UpdateItems items={items} setItems={setItems}></UpdateItems>
-        <DeleteItems items={items} setItems={setItems}></DeleteItems>
+        <CardReveal>
+          <AddItems items={items} setItems={setItems}></AddItems>
+        </CardReveal>
+        <CardReveal>
+          <UpdateItems items={items} setItems={setItems}></UpdateItems>
+        </CardReveal>
+        <CardReveal>
+          <DeleteItems items={items} setItems={setItems}></DeleteItems>
+        </CardReveal>
       </section>
       <section id='Section2' className="h-screen">
-        <DisplayItems items={items} setItems={setItems}></DisplayItems>
+        <DisplayItems items={items}></DisplayItems>
       </section>
     </div>
   )

@@ -22,10 +22,19 @@ interface DeleteItemsProps{
 }
 
 export function DeleteItems({items,setItems}:DeleteItemsProps){
-  const handleDeleteItem = (id:number) => {
-    setItems(items.filter((item:Item) => item.id !== id));
-  };
+
   const [id,setId]=useState<number|null>(null);
+  const [error, setError] = useState<string | null>(null)
+
+  const handleDeleteItem = (id:number) => {
+    const itemToDelete = items.find((item: Item) => item.id === id)
+    if (itemToDelete) {
+      setItems(items.filter((item: Item) => item.id !== id))
+      setError(null)
+    } else {
+      setError("Item ID not found")
+    }
+  };
 
   return (
     <div className="pt-3 pl-8 text-xl font-medium">
@@ -43,6 +52,7 @@ export function DeleteItems({items,setItems}:DeleteItemsProps){
               </div>
             </div>
           </form>
+          {error && <div className="text-red-500 mt-2">{error}</div>}
         </CardContent>
         <CardFooter className="flex justify-center">
           <Button variant="destructive" onClick={()=> id && handleDeleteItem(id)}>Delete</Button>
