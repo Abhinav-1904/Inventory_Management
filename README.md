@@ -10,7 +10,7 @@ A simple inventory management system built with Next.js. The system allows users
 
 ## Technologies Used
 
-- **Frontend**: React, TypeScript, Tailwind CSS
+- **Frontend**: React, TypeScript, Tailwind CSS, Motion
 - **UI**: Shadcn
 
 ## Installation
