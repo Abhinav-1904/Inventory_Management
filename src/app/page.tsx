@@ -12,7 +12,14 @@ export default function Home(){
   const [items,setItems] = useState([
     { id: 1, name: "Apples", category: "Fruits", quantity: 20 },
     { id: 2, name: "Bananas", category: "Fruits", quantity: 5 },
-    { id: 3, name: "Carrots", category: "Vegetables", quantity: 15 }
+    { id: 3, name: "Carrots", category: "Vegetables", quantity: 15 },
+    { id: 4, name: "Oranges", category: "Fruits", quantity: 8 },
+    { id: 5, name: "Tomatoes", category: "Vegetables", quantity: 12 },
+    { id: 6, name: "Potatoes", category: "Vegetables", quantity: 25 },
+    { id: 7, name: "Chicken Breast", category: "Meat", quantity: 10 },
+    { id: 8, name: "Salmon", category: "Fish", quantity: 7 },
+    { id: 9, name: "Milk", category: "Dairy", quantity: 18 },
+    { id: 10, name: "Cheese", category: "Dairy", quantity: 3 },
   ]);
 
   return (
