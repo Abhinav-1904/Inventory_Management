@@ -29,9 +29,9 @@ export default function Home(){
           <h1 className="flex justify-center pt-4 font-bold text-3xl">
             Inventory Management
           </h1>
-          <div className="flex justify-center my-2">
-            <a href='#Section1' className="mr-4 hover:cursor-pointer hover:text-gray-300">Operations</a>
-            <a href="#Section2" className="hover:cursor-pointer pr-4 hover:text-gray-300">Display Area</a>
+          <div className="flex justify-center my-3">
+            <a href='#Section1' className="pr-4 hover:cursor-pointer hover:text-gray-300">Operations</a>
+            <a href="#Section2" className="hover:cursor-pointer pr-11 hover:text-gray-300">Display Area</a>
           </div>
         </div>
       </AppbarReveal>
